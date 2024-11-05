@@ -2,6 +2,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Run Dockerized React App
+
+Build the Docker Image
+
+### `docker build -t youtube-downloader-app .`
+
+Run the Docker Container
+
+### `docker run -p 3000:3000 youtube-downloader-app`
+
 ## Available Scripts
 
 In the project directory, you can run:
