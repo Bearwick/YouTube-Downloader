@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import YouTubeDownloaderTitle from './components/YouTubeDownloaderTitle';
+import InputFieldURL from './components/InputFieldURL';
+import ThemeToggleProvider from './components/ThemeToggleProvider';
+import ThemeToggleSwitch from './components/ThemeToggleSwitch';
+import { Box } from '@mui/material';
 
 function App() {
 	return (
-		<div className='App'>
-			<header className='App-header'>
-				<img src={logo} className='App-logo' alt='logo' />
-				<p>
-					Edit <code>src/App.tsx</code> and save to reload.
-				</p>
-				<a
-					className='App-link'
-					href='https://reactjs.org'
-					target='_blank'
-					rel='noopener noreferrer'
-				>
-					Learn React
-				</a>
-			</header>
-		</div>
+		<ThemeToggleProvider>
+			<Box
+				className='App flex flex-col text-center min-h-dvh items-center gap-10'
+				sx={{ backgroundColor: 'primary.main' }}
+			>
+				<Box className='h-20 sm:h-40 w-full flex justify-end pr-4'>
+					<ThemeToggleSwitch />
+				</Box>
+				<YouTubeDownloaderTitle />
+				<InputFieldURL />
+			</Box>
+		</ThemeToggleProvider>
 	);
 }
 
